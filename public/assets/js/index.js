@@ -164,16 +164,18 @@ const renderNoteList = async (notes) => {
 
     return liEl;
   };
+  
 
-  if (jsonNotes.length === 0) {
+  if (jsonNotes.length === 0 || (jsonNotes.length === 1 && jsonNotes[0].title === 'Test Title' && jsonNotes[0].text === 'Test Text')) {
     noteListItems.push(createLi('No saved Notes', false));
   }
 
   jsonNotes.forEach((note) => {
-    const li = createLi(note.title);
-    li.dataset.note = JSON.stringify(note);
-
-    noteListItems.push(li);
+    if (!(note.title === 'Test Title' && note.text === 'Test Text')) {
+      const li = createLi(note.title);
+      li.dataset.note = JSON.stringify(note);
+      noteListItems.push(li);
+    }
   });
 
   if (window.location.pathname === '/notes') {
