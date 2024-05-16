@@ -1,0 +1,15 @@
+{
+    "buildCommand": "npm run build",
+    "startCommand": "node server.js",
+    "routes": [
+      {
+        "path": "/api",
+        "command": "node server.js"
+      },
+      {
+        "path": "/",
+        "command": "node server.js"
+      }
+    ]
+  }
+  

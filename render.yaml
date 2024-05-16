@@ -1,6 +1,0 @@
-services:
-  - name: web
-    env: node
-    buildCommand: npm install && npm run build
-    startCommand: node public/assets/js/index.js
-    healthCheckPath: /
