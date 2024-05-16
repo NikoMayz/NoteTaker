@@ -2,10 +2,10 @@
   "name": "note-taker",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node public/assets/js/index.js",
+    "start": "node server.js",
     "build": "echo 'No build script specified'" 
   },
   "author": "",
