@@ -5,7 +5,7 @@ const router = express.Router();
 
 //Landing Page Route
 router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public.index.html'));
+    res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
 // Notes Page Route
